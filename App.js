@@ -1,3 +1,4 @@
+import Marquee from "marquee";
 import React from "react";
 import { ImageBackground, StyleSheet, Text, View, SafeAreaView, Image, TouchableHighlight, Animated, Easing} from "react-native";
 
@@ -10,7 +11,7 @@ import { ImageBackground, StyleSheet, Text, View, SafeAreaView, Image, Touchable
 
  const startImageRotateFunction = () => {
 
-  rotateValueHolder.setValue(0);y
+  rotateValueHolder.setValue(0);
   Animated.timing(rotateValueHolder, {
     toValue: 1,
     duration: 3000,
@@ -25,7 +26,9 @@ import { ImageBackground, StyleSheet, Text, View, SafeAreaView, Image, Touchable
 const App = () => (
   <View style={styles.container}>
     <ImageBackground source={image} resizeMode="cover" style={styles.image}>
+      <marquee>
       <Text style={styles.text}>May the abundance of the Love of Christ fill all the days of your life.</Text>
+      </marquee>
      <Text style={styles.textBirthday}> Have a Blessed Birthday!</Text>
      <SafeAreaView style={{ flex:1 }}>
       
